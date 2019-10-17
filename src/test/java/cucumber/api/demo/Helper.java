@@ -9,12 +9,13 @@ import io.restassured.specification.RequestSpecification;
  */
 public class Helper {
 
-    private Response response;
     RequestSpecification requestSpec = new RequestSpecBuilder()
-            .setBaseUri("https://gorest.co.in/")
-            .addHeader("Authorization", "Bearer PUT_YOUR_TOKEN_HERE")
-            .build();
+    .setBaseUri("https://gorest.co.in/")
+    .addHeader("Authorization", "Bearer K6jGQqdZQ-a0uSqjsl6usm3pZMq9Pw9slUxQ")
+    .build();
     private Requests requests = new Requests(requestSpec);
+    private Response response;
+    private String userId;
 
     public Response getResponse() {
         return response;
@@ -31,4 +32,12 @@ public class Helper {
     public void setRequests(Requests requests) {
         this.requests = requests;
     }
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;        
+    }
+
 }

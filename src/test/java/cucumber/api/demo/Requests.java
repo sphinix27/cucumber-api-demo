@@ -20,4 +20,10 @@ class Requests {
     public Response delete(String endpoint) {
         return given().spec(requestSpecification).when().delete(endpoint);
     }
+
+    public Response post(String endpoint, String body) {
+        return given().spec(requestSpecification).when()
+            .body(body)
+            .post(endpoint);
+    }
 }

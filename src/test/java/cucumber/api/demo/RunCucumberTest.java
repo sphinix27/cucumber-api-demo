@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
  * RunCucumberTest
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = "pretty", features = "src/test/resources")
+@CucumberOptions(plugin = "pretty", features = "src/test/resources", tags = "@common")
 public class RunCucumberTest {
 
 }
